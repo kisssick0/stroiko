@@ -1,0 +1,1 @@
+select complex_name, complex_metro, complex_cost, complex_num_apart, complex_description from complexes

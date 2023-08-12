@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="auth">
+          <h4 align = center> Войти</h4>
+            <div align = center>
+                <form method="post">
+                    <input type="text" name="email" placeholder="Email">
+                    <br>
+                    <input type="password" name="password" style="width: 250px" placeholder="Пароль">
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="text-md-center">
+                <p>
+                    Чтобы записаться на прием необходимо
+                    <a href="{{ url_for('blueprint_auth.registration') }}" class="reg_link">Зарегистрироваться</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

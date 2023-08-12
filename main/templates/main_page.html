@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block content %}
+    <section class="section-padding pb-0" id="timeline">
+                <div class="container">
+                    <div class="row">
+
+                        <h2 class="text-center mb-lg-5 mb-4">Хотите купить квартиру СтройКо?</h2>
+
+                        <div class="timeline">
+                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
+                                <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                    <a class="timeline-link" href="{{ url_for('blueprint_apart.main') }}"><h3 class=" text-timeline-link">Выберите квартиру</h3></a>
+                                    <p>Выбирайте и сравнивайте ЖК и квартиры удобно онлайн. Доступны к просмотру планы и 3D-модели квартир.</p>
+                                </div>
+
+                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                    <i class="bi bi-bookmark-heart-fill timeline-icon fa-2x"></i>
+                                </div>
+
+                                <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+                                    <time>Шаг 1</time>
+                                </div>
+                            </div>
+
+                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes my-lg-5 my-4">
+                                <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                    <h3 class=" text-light">Запишитесь на просмотр</h3>
+
+                                    <p>Выберите удобное время для просмотра квартиры. Вам будет назначен персональный менеджер.</p>
+                                </div>
+
+                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                    <i class="bi bi-credit-card-fill timeline-icon fa-2x"></i>
+                                </div>
+
+                                <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+                                    <time>Шаг 3</time>
+                                </div>
+                            </div>
+
+                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
+                                <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                    <h3 class=" text-light">Пользуйтесь личным кабинетом</h3>
+
+                                    <p>Получайте необходимую информацию о вашей квартире и отслеживайте ход сделки.</p>
+                                </div>
+
+                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                    <i class="bi bi-house-fill timeline-icon fa-2x"></i>
+                                </div>
+
+                                <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+                                    <time>Шаг 3</time>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+{% endblock %}

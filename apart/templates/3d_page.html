@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+<br><br><br><br>
+    <div id="container">
+        <div id="model_3d">
+            <model-viewer src="{{ apart[7] }}" alt="Apartment" auto-rotate camera-controls ar ios-src="{{ apart[7] }}">
+            </model-viewer>
+        </div>
+    </div>
+{% endblock %}

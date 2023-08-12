@@ -1,0 +1,1 @@
+select manager_name, manager_surname from managers where manager_id = '$manager_id'

@@ -1,0 +1,1 @@
+select client_name, client_surname from clients where client_email = '$email' and client_password = '$password'

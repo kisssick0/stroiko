@@ -1,0 +1,1 @@
+select * from managers where manager_email = '$email' and manager_password = '$password'

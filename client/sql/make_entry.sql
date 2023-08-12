@@ -1,0 +1,1 @@
+INSERT INTO entries (`client_id`, `apart_id`, `entry_date`) VALUES ('$client_id', '$apart_id', '$entry_date');

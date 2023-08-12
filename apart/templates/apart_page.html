@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+<br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <h2 style="padding-left: 2%;">Просмотр квартиры</h2>
+            <div class="apart_page shadow-lg" style="width: 100%; text-align: start;">
+                <div style="display: flex;">
+                    <div class="apart_description">
+                        <p>ЖК: {{ apart[0] }}</p>
+                        <p>Количество комнат: {{ apart[1] }}</p>
+                        <p>Площадь: {{ apart[2] }}м²</p>
+                        <p>Этаж: {{ apart[3] }}</p>
+                        <p>Стоимость: {{ apart[4] }}₽</p>
+                        <p>Вид: {{ apart[5] }}</p>
+                    </div>
+                    <div style="text-align: center; width: 100%;">
+
+                        <h5><a href="{{ url_for('blueprint_apart.apart3d', id=apart[8]) }}"><i class="bi bi-badge-3d-fill fa-2x"></i></a></h5>
+                        <img src="{{ apart[6] }}" width="300" height="300">
+                    </div>
+                </div>
+                <form method="post">
+                    <input type="submit" value="Записаться на просмотр" style="width: 100%;">
+                </form>
+                <div class="apart_description" style="text-align: center; width: 100%;">
+                    Цена
+                    {% if market_price > apart[4] %}
+                    ниже рыночной
+                    {% elif market_price == apart[4] %}
+                    равна рыночной
+                    {% else %}
+                    выше рыночной
+                    {% endif %}
+                    <p style="color: #d3d3d3;">*Выводы сделаны на основе алгоритма</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

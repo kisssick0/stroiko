@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+<br><br><br><br>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="apartments_filter">
+                <form method="post" class="apart_form shadow-lg">
+                    <div class="custom-select">
+                        <select class="custom-select select-selected" name="apart_rooms">
+                            <option>Комнаты</option>
+                            <option>Студия</option>
+                            <option>1 комната</option>
+                            <option>2 комнаты</option>
+                            <option>3 комнаты</option>
+                            <option>4 комнаты</option>
+                        </select>
+                    </div>
+                        <input type="text" name="price_from" placeholder="Цена от">
+                        <input type="text" name="price_to" placeholder="Цена до">
+                        <input type="text" name="squares_from" placeholder="Площадь от, м²">
+                        <input type="text" name="squares_to" placeholder="Площадь до, м²">
+                    <div class="custom-select">
+                        <select class="custom-select select-selected" name="sorting">
+                            <option>Сортировка</option>
+                            <option>По возрастанию цены</option>
+                            <option>По убыванию цены</option>
+                            <option>По возрастанию площади</option>
+                            <option>По убыванию площади</option>
+                        </select>
+                    </div>
+                        <input type="submit">
+                </form>
+            </div>
+            <div class="apartments-list">
+                {% for ap in aparts %}
+                    <a href="{{ url_for('blueprint_apart.apart', id=ap[6]) }}" class="apart_link">
+                        <div class="apart">
+                            <h7>ЖК {{ ap[0] }}</h7>
+                            <img src="{{ ap[5] }}">
+                            <p>{{ ap[1] }} {{ ap[2] }} м² {{ ap[3] }} Этаж</p>
+                            <h2>{{ ap[4] }} ₽</h2>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

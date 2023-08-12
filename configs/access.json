@@ -1,0 +1,15 @@
+{
+  "client": [
+    "blueprint_client.main",
+    "blueprint_client.registration_appointment",
+    "blueprint_client.all_registration",
+    "blueprint_client.entries",
+    "blueprint_client.registration_time"
+  ],
+  "manager": [
+    "blueprint_manager.main",
+    "blueprint_manager.entries",
+    "blueprint_manager.requests",
+    "blueprint_manager.confirm"
+  ]
+}

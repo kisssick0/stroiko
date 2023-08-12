@@ -1,0 +1,18 @@
+{% extends "manager_layout.html" %}
+{% block content %}
+<br><br><br><br>
+<div class="container">
+    <div class="profile shadow-lg text-center">
+        {% for en in entries %}
+                <p>ФИО клиента: {{ en[1] }} {{ en[0] }} {{ en[2] }}</p>
+                <p>Дата: {{ en[3] }}</p>
+                <p>Офис: {{ en[4] }}</p>
+                <p>ID квартиры: {{ en[5] }}</p>
+                {% for i in range(3) %}
+                    <i class="bi bi-circle" style="color: #ffc1ea;"></i>
+                {% endfor %}
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

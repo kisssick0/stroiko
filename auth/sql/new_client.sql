@@ -1,0 +1,2 @@
+INSERT INTO `company`.`clients` (`client_name`, `client_surname`, `client_second_name`, `client_phone`, `client_email`, `client_password`)
+VALUES ('$client_name', '$surname', '$second_name', '$phone', '$email', '$password');

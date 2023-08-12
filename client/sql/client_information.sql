@@ -1,0 +1,1 @@
+select client_name, client_surname, client_second_name, client_email, client_phone from clients where client_id = $client_id

@@ -1,0 +1,16 @@
+{% extends "client_layout.html" %}
+{% block content %}
+<br><br><br><br>
+<div class="container">
+    <h2 style="padding-left: 15%;">Посещения</h2>
+    <div class="profile shadow-lg text-center">
+        {% for entrie in entries %}
+        <div>
+            <p>Менеджер: {{ entrie[1] }} {{ entrie[0] }} {{ entrie[2] }}</p>
+            <p> Дата: {{ entrie[0] }} </p>
+            <p> Адрес офиса: {{ entrie[1] }} </p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

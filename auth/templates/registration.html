@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="auth">
+            <h4 align = center>Регистрация</h4>
+            <div align = center>
+                <form method="POST">
+                    <input type="text" name="name" placeholder="Имя"> <br>
+                    <input type="text" name="surname" placeholder="Фамилия"> <br>
+                    <input type="text" name="second_name" placeholder="Отчество"> <br>
+                    <input type="text" name="phone" placeholder="Номер Телефона"> <br>
+                    <p style="color: #E3242B;">Введите номер телефона в формате 89998887766</p>
+                    <input type="text" name="email" placeholder="Email"> <br>
+                    <input type="password" name="password" placeholder="Пароль" style="width: 250px"> <br>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

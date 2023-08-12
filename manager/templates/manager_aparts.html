@@ -1,0 +1,23 @@
+{% extends "manager_layout.html" %}
+{% block content %}
+<br><br>
+<div class="container">
+    <form method="post" class="manager_form shadow-lg">
+        <input type="submit" value="Добавить">
+        <input type="submit" value="Изменить">
+        <input type="submit" value="Удалить">
+    </form>
+    <div class="apartments-list">
+                {% for ap in aparts %}
+                    <a href="{{ url_for('blueprint_auth.auth') }}" class="apart_link">
+                        <div class="apart">
+                            <h7>ЖК {{ ap[0] }}</h7>
+                            <img src="{{ ap[5] }}">
+                            <p>{{ ap[1] }} {{ ap[2] }} м² {{ ap[3] }} Этаж</p>
+                            <h2>{{ ap[4] }} ₽</h2>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+</div>
+{% endblock %}

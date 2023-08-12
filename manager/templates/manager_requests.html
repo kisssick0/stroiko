@@ -1,0 +1,23 @@
+{% extends "manager_layout.html" %}
+{% block content %}
+<br><br><br><br>
+    <div class="container">
+        <div class="apartments-list">
+            {% for req in requests %}
+                <div class="request">
+                    <p style="font-weight: bold;">Клиент</p>
+                    <h7>{{ req[1] }} {{ req[0] }} {{ req[2] }}</h7>
+                    <p style="font-weight: bold;">Дата</p>
+                    <h7>{{ req[3] }}</h7>
+                    <p style="font-weight: bold;">Адрес</p>
+                    <h7>{{ req[4] }}</h7>
+                    <a href="{{ url_for('blueprint_apart.apart', id=req[5]) }}"><h6>Квартира <i class="bi bi-plus-circle-fill"></i></h6></a>
+                    <div class="exit">
+                        <a href="{{ url_for('blueprint_manager.confirm', id=req[6]) }}" class="text-center"><li style="margin: 0; list-style-type: none; text-decoration: none; color: #fff;">Подтвердить</li></a>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

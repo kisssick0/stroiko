@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<header class="header">
+    <div class="container">
+        <div class="description text-center" id="infopage">
+            <div>СтройКо</div><br><br>
+
+            {% for el in complexes %}
+                <div>ЖК {{ el[0] }}</div>
+                <div>Метро {{ el[1] }}</div>
+                <div>Стоимость от {{ el[2] }}</div>
+                <div>Осталось {{ el[3] }} квартир</div>
+                <div>Описание {{ el[4] }}</div><br><br>
+            {% endfor %}
+            <p><a href="{{ url_for('blueprint_auth.auth') }}" class="apart_link">Войти</a></p>
+        </div>
+    </div>
+</header>
+{% endblock %}
